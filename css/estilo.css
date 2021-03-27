@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{ background: #eee; }
+
+.containerGlobal{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  margin: auto;
+}
+
+header{
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #df0d00;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 6px 0 rgba(50, 50,50, .9), 0 10px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+h1{
+	color: #fff;
+	font-size: 2.5em;
+	margin: auto;
+	font-family: 'Roboto', sans-serif;
+	text-shadow: 3px 3px #000;
+}
+
+.containerColorContainers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90vw;
+}
+
+.colorContainer{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #888;
+  box-sizing: border-box;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 6px 6px 0 rgba(50, 50,50, .9), 0 10px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.colorCode{ 
+  text-align: center;
+  padding: 5px;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.colorSample{
+  width: 200px;
+  height: 100px;
+  border: 1px solid #ccc;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.containerRanges{
+	margin: 0 auto;
+}
+
+.containerColorRange{
+  display: flex;
+  align-items: center;
+}
+
+label{
+	margin-right: 5px;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-family: 'Roboto', sans-serif;
+	border: 1px solid #000;
+	padding: 2px;
+}
+
+input[type="range"]{
+  width: 200px;
+  margin: 10px 5px;
+}
+
+span{ 
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+}
+
+footer{
+	width: 100vw;
+	height: 10vh;
+	background: rgba(0, 0, 0, .95);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 25px;
+}
+
+@media (max-width: 1142px){
+  .containerColorContainers{
+  	width: 100vw;
+  }
+}
+
+@media (max-width: 711px){
+  .containerGlobal{
+    width: 100vw;  
+  }
+
+  .containerColorContainers{
+  	width: 100vw;
+  }
+}
+
+@media (max-width: 322px){
+
+  header{ 
+    margin-bottom: 15px;
+  }
+  h1{ 
+    font-size: 2em;
+    text-shadow: 2px 2px #000;
+  }
+  .containerGlobal{ 
+  	overflow-x: hidden;
+   }
+   .colorContainer{
+   	margin: 12px;
+   }
+  input[type="range"]{
+  width: 170px;
+  margin: 10px 2vw;
+  }
+  .colorContainer{
+    padding: 2vw;
+  }
+  .colorCode, span, label{
+   font-size: 1em;
+  }
+  footer{
+  	margin-top: 15px;
+  }
+  
+}
+
+@media (max-width: 270px){
+  input[type="range"]{
+  width: 150px;
+  margin: 10px 1vw;
+  }
+}
+
+@media (max-width: 240px){
+  input[type="range"]{
+  width: 130px;
+  margin: 10px 1vw;
+  }
+}

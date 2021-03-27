@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="containerGlobal">
+
+  	<header>
+  	  <h1>Color Picker</h1> 	  
+  	</header>
+
+  	<div class="containerColorContainers">
+
+  	<!--Container hexadecimal starts -->
+      <div class="colorContainer" id="containerHexadecimal">
+        <div class="containerColorSampleAndHexadecimalCode">
+      	  <p id="hexadecimalCode" class="colorCode">#??????</p>
+      	  <div class="colorSample" id="hexadecimalColorSample" ></div>
+        </div>
+
+        <div class="containerRanges">
+      	  <div class="containerColorRange">
+      	    <label for="hexaRedBar" title="red">r</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="hexaRedBar1" min="0" max="15" title="" onchange="paintColorSampleHexadecimal()">
+      	    <span class="maxValue">f</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="hexaRedBar" title="green">r</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="hexaRedBar2" min="0" max="15" title="" onchange="paintColorSampleHexadecimal()">
+      	    <span class="maxValue">f</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="hexaGreenBar1" title="blue">g</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="hexaGreenBar1" min="0" max="15" title="" onchange="paintColorSampleHexadecimal()">
+      	    <span class="maxValue">f</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="hexaGreenBar2" title="alpha">g</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="hexaGreenBar2" min="0" max="15" title="" onchange="paintColorSampleHexadecimal()">
+      	    <span class="maxValue">f</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="hexaBlueBar1" title="blue">b</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="hexaBlueBar1" min="0" max="15" title="" onchange="paintColorSampleHexadecimal()">
+      	    <span class="maxValue">f</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="hexaBlueBar2" title="alpha">b</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="hexaBlueBar2" min="0" max="15" title="" onchange="paintColorSampleHexadecimal()">
+      	    <span class="maxValue">f</span>
+      	  </div>
+        </div>
+      </div>
+      <!-- Container hexadecimal ends -->
+  	  <!-- Container rgba starts -->
+      <div class="colorContainer" id="containerRgba">
+
+        <div class="containerColorSampleAndRgbaCode">
+      	  <p id="rgbaCode" class="colorCode">rgba( , , , )</p>
+      	  <div class="colorSample" id="colorSample" ></div>
+        </div>
+
+        <div class="containerRanges">
+      	  <div class="containerColorRange">
+      	    <label for="rgbaRedBar" title="red">r</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="rgbaRedBar" min="0" max="255" title="" onchange="paintColorSampleRgba()">
+      	    <span class="maxValue">255</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="rgbaGreenBar" title="green">g</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="rgbaGreenBar" min="0" max="255" title="" onchange="paintColorSampleRgba()">
+      	    <span class="maxValue">255</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="rgbaBlueBar" title="blue">b</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="rgbaBlueBar" min="0" max="255" title="" onchange="paintColorSampleRgba()">
+      	    <span class="maxValue">255</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="rgbaAlphaBar" title="alpha">a</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="rgbaAlphaBar" min="0" max="1" step="0.1" title="" 
+      	    onchange="paintColorSampleRgba()">
+      	    <span class="maxValue">1</span>
+      	  </div>
+        </div>
+      </div>
+      <!-- Container rgba ends -->
+      <!-- Container rgb starts -->
+      <div class="colorContainer" id="containerRgb">
+
+        <div class="containerColorSampleAndRgbCode">
+      	  <p id="rgbCode" class="colorCode">rgb( , , )</p>
+      	  <div class="colorSample" id="rgbColorSample" ></div>
+        </div>
+
+        <div class="containerRanges">
+      	  <div class="containerColorRange">
+      	    <label for="rgbRedBar" title="red">r</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="rgbRedBar" min="0" max="255" title="" onchange="paintColorSampleRgb()">
+      	    <span class="maxValue">255</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="rgbGreenBar" title="green">g</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="rgbGreenBar" min="0" max="255" title="" onchange="paintColorSampleRgb()">
+      	    <span class="maxValue">255</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="rgbBlueBar" title="blue">b</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="rgbBlueBar" min="0" max="255" title="" onchange="paintColorSampleRgb()">
+      	    <span class="maxValue">255</span>
+      	  </div>      	
+        </div>
+      </div>
+      <!-- Container rgb ends -->
+      <!-- Container hsla starts -->
+      <div class="colorContainer" id="containerHsla">
+
+        <div class="containerColorSampleAndHslaCode">
+      	  <p id="hslaCode" class="colorCode">hsla( , , , )</p>
+      	  <div class="colorSample" id="hslaColorSample" ></div>
+        </div>
+
+        <div class="containerRanges">
+      	  <div class="containerColorRange">
+      	    <label for="hueBar" title="hue">h</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="hueBar" min="0" max="360" title="" onchange="paintColorSampleHsla()">
+      	    <span class="maxValue">360</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="saturationBar" title="saturation">s</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="saturationBar" min="0" max="100" title="" onchange="paintColorSampleHsla()">
+      	    <span class="maxValue">100%</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="lightnessBar" title="lightness">l</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="lightnessBar" min="0" max="100" title="" onchange="paintColorSampleHsla()">
+      	    <span class="maxValue">100%</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="hslaAlphaBar" title="alpha">a</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="hslaAlphaBar" min="0" max="1" step="0.1" title="" onchange="paintColorSampleHsla()">
+      	    <span class="maxValue">1</span>
+      	  </div>
+        </div>
+      </div>
+      <!-- Container hsla ends -->
+      <!-- Container hsl starts -->
+      <div class="colorContainer" id="containerHsl">
+
+        <div class="containerColorSampleAndHslCode">
+      	  <p id="hslCode" class="colorCode">hsl( , , )</p>
+      	  <div class="colorSample" id="hslColorSample" ></div>
+        </div>
+
+        <div class="containerRanges">
+      	  <div class="containerColorRange">
+      	    <label for="hueBarHsl" title="hue">h</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="hueBarHsl" min="0" max="360" title="" onchange="paintColorSampleHsl()">
+      	    <span class="maxValue">360</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="saturationBarHsl" title="saturation">s</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="saturationBarHsl" min="0" max="100" title="" onchange="paintColorSampleHsl()">
+      	    <span class="maxValue">100%</span>
+      	  </div>
+
+      	  <div class="containerColorRange">
+      	    <label for="lightnessBarHsl" title="lightness">l</label>
+      	    <span class="minValue">0</span>
+      	    <input type="range" id="lightnessBarHsl" min="0" max="100" title="" onchange="paintColorSampleHsl()">
+      	    <span class="maxValue">100%</span>
+      	  </div>
+        </div>
+      </div>
+      <!--Container hsl ends -->
+	</div>
+	<footer></footer>
+  </div>
+</body>
+</html>
